@@ -65,7 +65,7 @@ class DataValidation:
         
 
     ## read schema.yaml
-    @staticmethod  ## so that we can import and use this anywhere
+    @staticmethod   ## so that we can access it from anywhere without using class variable
     def read_data(file_path)->pd.DataFrame:
         try:
             return pd.read_csv(file_path)
