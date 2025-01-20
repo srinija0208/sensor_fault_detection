@@ -37,6 +37,8 @@ def write_yaml_file(file_path: str, content: object, replace: bool = False) -> N
 
 
 
+## saving csv files into numpy array
+
 def save_numpy_array_data(file_path: str, array: np.array):
     """
     Save numpy array data to file
@@ -52,6 +54,8 @@ def save_numpy_array_data(file_path: str, array: np.array):
         raise SensorException(e, sys) from e
 
 
+## loading numpy array data
+
 def load_numpy_array_data(file_path: str) -> np.array:
     """
     load numpy array data from file
@@ -65,6 +69,8 @@ def load_numpy_array_data(file_path: str) -> np.array:
         raise SensorException(e, sys) from e
 
 
+## saving numpy array as .pkl object(converting into byte form)  -- SERIALIZATION
+
 def save_object(file_path: str, obj: object) -> None:
     try:
         logging.info("Entered the save_object method of MainUtils class")
@@ -75,6 +81,8 @@ def save_object(file_path: str, obj: object) -> None:
     except Exception as e:
         raise SensorException(e, sys) from e
 
+
+## reading/loading pkl object(convertin pkl into numeric form)  -- DESERIALIZATION
 
 def load_object(file_path: str, ) -> object:
     try:

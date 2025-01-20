@@ -11,4 +11,10 @@ PyYAML
 dill
 scipy 
 imblearn==0.0
+xgboost==1.6.2
+
+fastapi
+uvicorn
+starlette
+
 -e .   #editable mode 
