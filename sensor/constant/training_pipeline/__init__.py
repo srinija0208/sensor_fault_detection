@@ -1,4 +1,5 @@
 import os 
+from sensor.constant.s3_bucket import TRAINING_BUCKET_NAME
 
 TARGET_COLUMN = "class"
 PIPELINE_NAME = "sensor"
@@ -65,6 +66,7 @@ MODEL_EVALUATION_CHANGED_THRESHOLD_SCORE: float = 0.02
 MODEL_EVALUATION_REPORT_NAME= "report.yaml"
 
 SAVED_MODEL_DIR =os.path.join("saved_models")
+OUTPUT_FILE_PATH = os.path.join("output_file")
 
 
 """

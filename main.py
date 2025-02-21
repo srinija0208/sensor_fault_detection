@@ -12,7 +12,7 @@ from sensor.pipeline.training_pipeline import TrainPipeline
 from sensor.utils.main_utils import read_yaml_file
 from sensor.utils.main_utils import load_object
 from sensor.ml.model.estimator import ModelResolver,TargetValueMapping
-from sensor.constant.training_pipeline import SAVED_MODEL_DIR
+from sensor.constant.training_pipeline import SAVED_MODEL_DIR, OUTPUT_FILE_PATH
 
 from fastapi import FastAPI
 # from uvicorn import app as app_run
@@ -61,10 +61,10 @@ async def train_route():
 
 ## prediction
 @app.get("/predict")
-async def predict_route():
+async def predict_route(file:UploadFile = File(r"")):
     try:
         #get data from user csv file
-        #conver csv file to dataframe
+        #convert csv file to dataframe
 
         df=None
         model_resolver = ModelResolver(model_dir=SAVED_MODEL_DIR)
